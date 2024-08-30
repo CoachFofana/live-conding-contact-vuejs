@@ -71,7 +71,7 @@ export const useContactStore = defineStore('contactStore', {
                     ...id,
                     newContact
                 }
-            }            
+            }
         },
         show(id) {
             const contactIndex = this.contacts.findIndex(c => c.id === id);
