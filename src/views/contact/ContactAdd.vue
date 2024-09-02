@@ -3,7 +3,10 @@ import { useContactStore } from "@store/contactStore";
 import { useRouter } from "vue-router"
 const store = useContactStore();
 const router = useRouter()
+
+store.resetForm()
 const form = store.contactForm;
+
 
 const addContact = () => {
   if (form.name && form.number && form.email) {
@@ -19,7 +22,8 @@ const addContact = () => {
   <div>
     <h1>Contact add</h1>
     <div class="contact-add w-50 m-auto">
-      <ContactForm @on-submit-form="addContact" />
+      <ContactForm mode="add" @on-submit-add-form="addContact" />
+
     </div>
   </div>
 </template>

@@ -22,7 +22,7 @@ defineProps({
 
 <template>
   <span>
-    <router-link :to="route" :class="customClass"  v-if="isLink && route">
+    <router-link :to="route" :class="customClass" v-if="isLink && route">
       <i :class="icon" v-if="icon"></i>
       {{ title }}
     </router-link>
@@ -32,9 +32,8 @@ defineProps({
       {{ title }}
     </button>
 
-    
+
   </span>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
